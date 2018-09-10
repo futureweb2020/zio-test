@@ -12,10 +12,22 @@ export default {
   name: 'TextCircle',
   props: {
     text: String,
-    size: Number,
-    bgColor: String,
-    centerX: Number,
-    centerY: Number
+    size: {
+      default: 100,
+      type: Number
+    },
+    bgColor: {
+      default: 'gray',
+      type: String
+    },
+    centerX: {
+      default: 50,
+      type: Number
+    },
+    centerY: {
+      default: 50,
+      type: Number
+    }
   }
 }
 </script>
