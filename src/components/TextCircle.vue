@@ -1,12 +1,21 @@
 <template>
-  <div>{{ text }}</div>
+  <div>
+    <svg :height="size" :width="size">
+      <circle cx="50%" cy="50%" r="50%" :fill="bgColor" />
+      <text :x="centerX" :y="centerY">{{ text }}</text>
+    </svg>
+  </div>
 </template>
 
 <script>
 export default {
   name: 'TextCircle',
   props: {
-    text: String
+    text: String,
+    size: Number,
+    bgColor: String,
+    centerX: Number,
+    centerY: Number
   }
 }
 </script>
