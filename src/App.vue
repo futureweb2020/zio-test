@@ -1,17 +1,23 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <input type="text" v-model="text"><br/><br/>
+    <TextCircle :text="text" />
+    <TextCircle :text="text" />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import TextCircle from './components/TextCircle.vue'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    TextCircle
+  },
+  data: function () {
+    return {
+      text: ''
+    }
   }
 }
 </script>
