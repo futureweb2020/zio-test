@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <input type="text" v-model="text"><br/><br/>
-    <TextCircle :text="text" :size="100" :centerX="50" :centerY="50" bgColor="green" />
-    <TextCircle :text="text" :size="150" :centerX="50" :centerY="75" bgColor="lightgreen" />
+    <TextCircle :text="text" :size="100" :centerX="200" :centerY="150" bgColor="green" />
+    <TextCircle :text="text" :size="150" :centerX="200" :centerY="300" bgColor="lightgreen" />
   </div>
 </template>
 
