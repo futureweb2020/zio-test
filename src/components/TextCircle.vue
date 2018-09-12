@@ -1,10 +1,8 @@
 <template>
-  <div>
-    <svg :height="size" :width="size">
-      <circle cx="50%" cy="50%" r="50%" :fill="bgColor" />
-      <text :x="centerX" :y="centerY" alignment-baseline="middle" text-anchor="middle">{{ text }}</text>
-    </svg>
-  </div>
+  <svg :height="size" :width="size" :style="{ position: 'absolute', left: centerX, top: centerY, transform: 'translate(-50%, -50%)' }">
+    <circle cx="50%" cy="50%" r="50%" :fill="bgColor" />
+    <text x="50%" y="50%" alignment-baseline="middle" text-anchor="middle">{{ text }}</text>
+  </svg>
 </template>
 
 <script>
@@ -21,11 +19,11 @@ export default {
       type: String
     },
     centerX: {
-      default: 50,
+      default: 0,
       type: Number
     },
     centerY: {
-      default: 50,
+      default: 0,
       type: Number
     }
   }
